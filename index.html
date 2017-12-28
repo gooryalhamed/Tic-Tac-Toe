@@ -16,37 +16,31 @@
 		<div class="text-center">
 			<div class="row">
 				<p id="pickSideText">Pick your side:</p>
-				<button id="pickX" class="side">X</button> 
-				<button id="pickO" class="side">O</button> 
+				<div id="pickX" class="side">X</div> 
+				<div id="pickO" class="side">O</div> 
 				<p id="notice">
 					Note: X makes first move.
 				</p>
 			</div>
-			<div class="row">
-				<button id="1" class="cell"></button> 
+			<div id="cells-wrapper">
+				<div class="row first-row">
+					<div id="0" class="cell col-xs-4"></div>
+					<div id="1" class="cell col-xs-4"></div> 
+					<div id="2" class="cell col-xs-4"></div> 
+				</div>
 
-				<button id="2" class="cell"></button> 
+				<div class="row">
+					<div id="3" class="cell col-xs-4"></div>
+					<div id="4" class="cell col-xs-4"></div> 
+					<div id="5" class="cell col-xs-4"></div> 
+				</div>
 
-				<button id="3" class="cell"></button> 
-
-				<br>
-
-				<button id="4" class="cell"></button> 
-
-				<button id="5" class="cell"></button> 
-
-				<button id="6" class="cell"></button> 
-
-				<br>
-
-				<button id="7" class="cell"></button> 
-
-				<button id="8" class="cell"></button> 
-
-				<button id="9" class="cell"></button> 
-
+				<div class="row last-row">
+					<div id="6" class="cell col-xs-4"></div>
+					<div id="7" class="cell col-xs-4"></div> 
+					<div id="8" class="cell col-xs-4"></div> 
+				</div>
 			</div>
-
 			<p id="invalidClick"></p>
 		</div>
 	</div>
