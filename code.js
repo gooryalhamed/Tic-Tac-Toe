@@ -12,8 +12,6 @@ var i, j;
 // select a turn
 $(".side").click(function(e){
   sideSlected = true;
-  gameOver = false;
-  board.fill(" ");
   $("#invalidClick").text("");
   $("#pickX, #pickO, #notice").hide();
   if (e.target.id == "pickX") {
@@ -51,6 +49,8 @@ $(".cell").click(function(e) {
 });
 
 function newGame() {
+  gameOver = false;
+  board.fill(" ");
   $(".cell").text(" ");
   $(".cell").css("background-color", "#b3cce6");
 }
