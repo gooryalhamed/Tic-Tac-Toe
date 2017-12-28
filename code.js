@@ -9,12 +9,12 @@ $(".side").click(function(e){
   $("#pickX, #pickO, #notice").hide();
   if (e.target.id == "pickX") {
     $("#pickSideText").html("You Picked X");
-    player = 1;
+    player = "user";
     newGame();
   }
   else {
     $("#pickSideText").html("You Picked O");
-    player = 2;
+    player = "computer";
     newGame();
     aiMove();
   }
@@ -26,10 +26,10 @@ $(".cell").click(function(e) {
     $("#invalidClick").text("Please select your side before playing!");
   }
   else{
-    if (player == 1) {
+    if (player == "user") {
       $("#"+Id+"").text("X");
     }
-    else if (player == 2){
+    else if (player == "computer"){
       $("#"+Id+"").text("O");
     }
     $("#"+Id+"").css("color", "white");
@@ -193,7 +193,7 @@ function aiMove() {
   var x8 = document.getElementById("8").innerHTML;
   var x9 = document.getElementById("9").innerHTML;
   movesMade++;
-  if (player === 1) {
+  if (player == "user") {
     if ( x5 === "p" ) {
       $("#5").html("O");
       $("#5").css("color", "white");
@@ -479,17 +479,17 @@ function aiMove() {
     }
 
 
-  } //end of if player == 1
+  } //end of if player == "user"
 
 
-  if (player == 2) {
+  if (player == "computer") {
 
    if ( x5 === "p" ) {
     $("#5").html("X");
     $("#5").css("color", "white");
   }     
 
-  // below are the player 2 offensive moves
+  // below are the player computer offensive moves
   else if ( x5 === "X" && x1 === "X" && x9 === "p" ) {
     $("#9").html("X");
     $("#9").css("color", "white");
@@ -592,7 +592,7 @@ function aiMove() {
       $("#7").css("color", "white");
     }
 
-     //below are the player 2 defensive moves
+     //below are the player computer defensive moves
      
      else if ( x5 === "O" && x1 === "O" && x9 === "p" ) {
       $("#9").html("X");
@@ -768,5 +768,5 @@ function aiMove() {
       $("#8").css("color", "white");
     }
 
-   } // end of if player == 2
+   } // end of if player == computer
 } //end of AI move 
